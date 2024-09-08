@@ -1,0 +1,86 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff; /* Light blue background */
+    font-family: Arial, sans-serif;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #ffffff; /* White background */
+    border: 2px solid #ff4500; /* Orange border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow */
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff4500; /* Orange color */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin: 0 auto;
+}
+
+.hole {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #32cd32; /* Lime green background */
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mole {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    bottom: 0;
+    left: 20px;
+    background-color: #ff6347; /* Tomato red mole */
+    border-radius: 50%;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.mole.show {
+    transform: translateY(0%);
+}
+
+.score-board {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff4500; /* Orange button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #ffffff; /* White text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Light shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #ff6347; /* Tomato red */
+}
+
+button:active {
+    transform: translateY(2px);
+}
